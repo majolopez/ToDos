@@ -16,10 +16,9 @@ Template.task.helpers({
   },
   currentTasks : function(e){
   sprintDep.depend();
-
-  if("undefined"=== typeof currentSprintId)
+  console.log(currentSprintId);
+  if("undefined"=== typeof currentSprintId || currentSprintId == 0)
   {
-      console.log(tasks.find().fetch());
     return  tasks.find().fetch();
   }
   else
