@@ -1,0 +1,22 @@
+<template name = "taskList">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Sprint</th>
+        <th>Name</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tasks}}
+        <tr>
+          <td> {{_id}}</td>
+          <td> {{sprintName}}</td>
+          <td>{{taskDes}}</td>
+          <td><input type="checkbox" checked="{{checked}}" class="toggle-checked" /></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+</template>
